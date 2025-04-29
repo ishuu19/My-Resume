@@ -32,7 +32,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('p2.png') center/cover no-repeat;
+    background: url('') center/cover no-repeat;
     opacity: 0.15;
     z-index: 0;
 }
@@ -60,8 +60,9 @@ body {
 }
 
 .hero-text {
-    text-align: left;
-    max-width: 100%;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .hero-image {
@@ -204,19 +205,19 @@ body {
     font-size: 1.1rem;
 }
 
-/* Social Links */
-.social-links {
+/* Hero Section Social Links */
+.hero .social-links {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
-.social-link {
-    color: white;
+.hero .social-link {
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -224,45 +225,13 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.4);
     transition: all 0.3s ease;
     font-size: 1.5rem;
-    position: relative;
-    overflow: hidden;
 }
 
-.social-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(0);
-    transition: transform 0.3s ease;
-    border-radius: 50%;
-}
-
-.social-link:hover {
-    background: rgba(255, 255, 255, 0.15);
+.hero .social-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.8);
-}
-
-.social-link:hover::before {
-    transform: scale(1);
-}
-
-/* Add a subtle pulse animation to draw attention */
-@keyframes socialPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.social-link i {
-    position: relative;
-    z-index: 1;
-    animation: socialPulse 2s infinite;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Skills Section */
@@ -1447,4 +1416,94 @@ footer {
 .social-link:hover {
     transform: translateY(-5px);
     color: #000;
+}
+
+/* Timeline Courses and Skills */
+.timeline-courses,
+.timeline-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.course-box,
+.skill-tag {
+    background-color: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 2px;
+    font-weight: 500;
+}
+
+/* Override any existing skill-tag styles */
+.skill-tag {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* Ensure consistent spacing */
+.timeline-details {
+    margin-top: 15px;
+}
+
+/* Timeline content spacing */
+.timeline-content {
+    padding: 20px;
+}
+
+/* Timeline education grade styling */
+.timeline-education-grade {
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+/* Profile Image Styles */
+.profile-image-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.1);
+}
+
+/* Update hero-text styles to accommodate image */
+.hero-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments for profile image */
+@media screen and (max-width: 768px) {
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5rem;
+    }
 } 

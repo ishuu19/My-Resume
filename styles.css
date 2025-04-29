@@ -1506,4 +1506,61 @@ footer {
         height: 150px;
         margin-bottom: 1.5rem;
     }
+}
+
+/* Timeline Item Types */
+.timeline-content[data-type="education"] {
+    background: #ffffff;
+    border: 1px solid #000000;
+}
+
+.timeline-content[data-type="education"] h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-content[data-type="education"] h4 i {
+    font-size: 1.2rem;
+}
+
+.timeline-content[data-type="experience"] {
+    background: #ffffff;
+    border: 1px dashed #000000;
+}
+
+.timeline-content[data-type="experience"] h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-content[data-type="experience"] h4 i {
+    font-size: 1.2rem;
+}
+
+.timeline-content[data-type="birth"] {
+    background: #ffffff;
+    border: 2px solid #000000;
+}
+
+.timeline-content[data-type="birth"] h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Education specific styles */
+.timeline-content[data-type="education"] .timeline-education-grade {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+
+/* Override any default timeline-content border styles */
+.timeline-content {
+    border: 1px solid #000000;
 } 

@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analyst Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="bengali-logo">ঈ</span>
+                    <span class="bengali-text">ঈশান</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="projects.html" class="nav-item"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="hobbies.html" class="nav-item"><i class="fas fa-heart"></i> Hobbies</a>
+                <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="floating-shapes">
@@ -157,6 +175,24 @@
         type();
         requestAnimationFrame(updatePercentage);
     };
+
+    // Function to handle header visibility
+    function handleHeaderVisibility() {
+        const header = document.querySelector('.sticky-header');
+        const hero = document.querySelector('.hero');
+        const heroBottom = hero.offsetTop + hero.offsetHeight;
+        
+        if (window.scrollY > heroBottom - 100) {
+            header.classList.add('visible');
+        } else {
+            header.classList.remove('visible');
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleHeaderVisibility);
+    // Initial check
+    handleHeaderVisibility();
     </script>
 
     <!-- Skills Section -->
@@ -374,7 +410,7 @@
                         <span class="skill-tag">PyMuPDF</span>
                     </div>
                     <div class="timeline-details">
-                        <p>In this role, I will:</p>
+                        <p>In this role, I did the following:</p>
                         <ul>
                             <li>Transform textbooks into machine-readable formats using advanced machine learning techniques</li>
                             <li>Develop a Python integration with the Notion REST API for seamless data management automation</li>
@@ -422,12 +458,12 @@
                     </div>
                     <div class="timeline-details">
                         <p>I did the following during this internship:</p>
-                        <ol>
+                        <ul>
                             <li>Web Automated login and scrape useful data to JSON</li>
                             <li>Tested app using flutter and node.js</li>
                             <li>Collected and organized research data, including transcribing and analyzing it, and drafting initial findings</li>
                             <li>Assisted with various research projects</li>
-                        </ol>
+                        </ul>
                     </div>
                 </div>
                 <div class="timeline-date">Sep 2024 - Jan 2025</div>
@@ -483,7 +519,7 @@
                         <span class="skill-tag">Web Scraping</span>
                     </div>
                     <div class="timeline-details">
-                        <p>This is a part of TwoHand Limited</p>
+                        <p>This is a part of TwoHand Limited. I did the following:</p>
                         <ul>
                             <li>Managed 2,000,000+ data entries analysed data related to collectibles using various tools</li>
                             <li>Conducted market research for about 45 excel files to identify trends in the collectibles industry</li>

@@ -27,10 +27,47 @@
         
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
             padding: 15px 0;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .bengali-logo {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #000;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .bengali-text {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
         }
         
         .nav-link {
@@ -207,10 +244,18 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
-            <a href="projects.html" class="nav-link"><i class="fas fa-code"></i> Projects</a>
-            <a href="hobbies.html" class="nav-link active"><i class="fas fa-heart"></i> Hobbies</a>
-            <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            <div class="logo">
+                <a href="index.html">
+                    <span class="bengali-logo">ঈ</span>
+                    <span class="bengali-text">ঈশান</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="hobbies.html" class="nav-link active"><i class="fas fa-heart"></i> Hobbies</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
         </nav>
     </header>
 

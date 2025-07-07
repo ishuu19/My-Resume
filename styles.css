@@ -29,8 +29,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
-    color: white;
+    background: linear-gradient(135deg, #000 0%, #222 100%);
+    color: #fff;
     padding: 2rem;
     position: relative;
     overflow: hidden;
@@ -60,20 +60,25 @@ body {
 }
 
 .hero-content {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    position: relative;
-    z-index: 2;
+    justify-content: center;
+    gap: 3rem;
     padding: 0 2rem;
 }
 
+.hero-text, .navigation-links, .social-links, .download-resume-btn, .nav-link, .social-link {
+    filter: grayscale(1) contrast(1.1);
+}
+
 .hero-text {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 500px;
+    text-align: left;
+    margin: 0;
+    color: #fff !important;
+    background: none !important;
+    filter: none !important;
 }
 
 .hero-image {
@@ -81,22 +86,23 @@ body {
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     margin-bottom: 1rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
     position: relative;
     display: inline-block;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     line-height: 1.2;
-    background: linear-gradient(45deg, #ffffff, #e0e0e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
     padding: 0.5rem 0;
     white-space: nowrap;
     width: 100%;
     text-align: left;
+    /* font-family: "Bungee", sans-serif !important; */
 }
 
 .hero h1::after {
@@ -139,17 +145,17 @@ body {
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.8;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
     max-width: 600px;
     line-height: 1.6;
 }
 
 /* Typing Animation */
 .typing-container {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
     min-height: 1.5em;
     text-align: center;
     position: relative;
@@ -158,6 +164,7 @@ body {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    color: #fff;
 }
 
 .typing-container::after {
@@ -189,27 +196,27 @@ body {
 .navigation-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
+    gap: 1.2rem;
+    margin: 1.5rem 0 1rem 0;
 }
 
 .nav-link {
-    color: white;
+    color: #fff !important;
     text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    padding: 0.7rem 1.6rem;
+    border: 1.5px solid #fff;
+    border-radius: 24px;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background: transparent !important;
 }
 
 .nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: #fff !important;
+    color: #000 !important;
 }
 
 .nav-link i {
@@ -220,29 +227,28 @@ body {
 .hero .social-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
 }
 
 .hero .social-link {
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff !important;
     text-decoration: none;
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    transition: background 0.2s, color 0.2s;
     font-size: 1.5rem;
+    background: transparent !important;
 }
 
 .hero .social-link:hover {
-    color: #ffffff;
-    border-color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    background: #fff !important;
+    color: #000 !important;
 }
 
 /* Skills Section */
@@ -741,176 +747,51 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 0 1rem;
     }
-
+    .large-profile-image {
+        width: 220px;
+        height: 220px;
+        min-width: 220px;
+        min-height: 220px;
+        margin: 0 0 2rem 0;
+    }
     .hero-text {
         text-align: center;
-    }
-
-    .typing-container {
-        text-align: center;
-    }
-
-    .typing-container::after {
-        left: 50%;
-        transform: translateX(-50%);
-        background: linear-gradient(to right, transparent, #ffffff, transparent);
-    }
-
-    .hero p {
-        margin: 0 auto 2rem;
-    }
-
-    .navigation-links {
-        justify-content: center;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-    
-    .data-visualization {
-        height: 300px;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .hero {
-        padding: 1rem 0.5rem;
-        min-height: unset;
+    .large-profile-image {
+        width: 140px;
+        height: 140px;
+        min-width: 140px;
+        min-height: 140px;
+        margin: 0 0 1.2rem 0;
+    }
+    .download-resume-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
     }
     .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+        gap: 1.2rem;
         padding: 0 0.5rem;
-    }
-    .profile-image-container {
-        width: 110px;
-        height: 110px;
-        margin-bottom: 1rem;
-    }
-    .profile-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .hero-text {
-        max-width: 100%;
-        margin: 0;
-        text-align: center;
-    }
-    .hero h1 {
-        font-size: 1.4rem;
-        padding: 0.2rem 0;
-        white-space: normal;
-        text-align: center;
-    }
-    .hero h2 {
-        font-size: 1rem;
-        gap: 0.5rem;
-        white-space: normal;
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        max-width: 100%;
-    }
-    .typing-container {
-        font-size: 1rem;
-        max-width: 100%;
-        margin-bottom: 1rem;
-    }
-    .navigation-links {
-        flex-direction: row !important;
-        gap: 0.7rem;
-        margin: 1rem 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .data-visualization {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-    .chart-container {
-        width: 100%;
-        max-width: 120px;
-        margin: 0 auto;
-    }
-    .interactive-chart {
-        width: 100%;
-        height: auto;
-        max-width: 120px;
-    }
-    .hero .social-links {
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-    .hero .social-link {
-        width: 36px;
-        height: 36px;
-        font-size: 1.1rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .hero {
-        padding: 0.5rem 0.1rem;
-    }
-    .hero-content {
-        gap: 1rem;
-        padding: 0 0.1rem;
-    }
-    .profile-image-container {
+    .large-profile-image {
         width: 80px;
         height: 80px;
-        margin-bottom: 0.5rem;
+        min-width: 80px;
+        min-height: 80px;
     }
-    .hero h1 {
-        font-size: 1.1rem;
-        padding: 0.1rem 0;
-    }
-    .hero h2 {
-        font-size: 0.85rem;
-    }
-    .hero p {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-    }
-    .typing-container {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-    }
-    .data-visualization {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        gap: 0.5rem;
-    }
-    .chart-container, .interactive-chart {
-        max-width: 80px;
-    }
-    .hero .social-links {
-        flex-direction: row !important;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero .social-link {
-        width: 28px;
-        height: 28px;
-        font-size: 0.9rem;
+    .download-resume-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -1948,4 +1829,164 @@ footer {
         flex-wrap: wrap;
         gap: 0.3rem;
     }
+}
+
+/* Large profile image for hero */
+.large-profile-image {
+    width: 320px;
+    height: 320px;
+    min-width: 320px;
+    min-height: 320px;
+    margin: 0 3rem 0 0;
+    filter: none !important;
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.large-profile-image .profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    filter: none !important;
+}
+
+.download-resume-btn {
+    display: inline-block;
+    margin: 1.5rem 0 1.5rem 0;
+    padding: 1.1rem 2.7rem;
+    background: #fff !important;
+    color: #000 !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    filter: none !important;
+}
+.download-resume-btn i {
+    margin-right: 0.8rem;
+}
+.download-resume-btn:hover {
+    background: #000 !important;
+    color: #fff !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transform: translateY(-2px) scale(1.04);
+    border: 2px solid #fff;
+}
+
+.no-grayscale, .no-grayscale * {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+/* Remove grayscale from the whole hero-content, only apply to text and links */
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+/* Ensure all links are clickable */
+.hero a, .hero .nav-link, .hero .social-link, .download-resume-btn {
+    pointer-events: auto !important;
+    z-index: 2;
+}
+
+/* Remove grayscale from profile image container and image */
+.profile-image-container, .profile-image, .large-profile-image, .large-profile-image .profile-image, .no-grayscale, .no-grayscale * {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+/* --- NAVBAR COLOR LOGIC --- */
+/* Default: black nav text */
+.nav-item, .nav-links .nav-item, .nav-links a.nav-item {
+    color: #111 !important;
+}
+
+/* On home page, nav text is white. Add .home-page to <body> in index.html */
+.home-page .nav-item, .home-page .nav-links .nav-item, .home-page .nav-links a.nav-item {
+    color: #fff !important;
+}
+
+/* --- HERO SECTION LINK FIX --- */
+.hero .navigation-links, .hero .nav-link {
+    filter: none !important;
+    pointer-events: auto !important;
+    z-index: 2;
+    position: relative;
+}
+
+/* --- NAVBAR ALWAYS VISIBLE ON NON-HOME PAGES --- */
+.sticky-header {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.home-page .sticky-header {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home-page .sticky-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Remove any overlay that could block links */
+.hero::before, .hero::after {
+    pointer-events: none !important;
+}
+
+/* --- NAVBAR VISIBILITY LOGIC --- */
+/* Hide sticky header in hero section on home page */
+.home-page .sticky-header {
+    display: none !important;
+}
+
+/* Always show navbar and nav links on all other pages */
+.sticky-header, .nav-links, .nav-item, .nav-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #111 !important;
+    transition: none !important;
+}
+
+/* Remove hover-only visibility for nav links */
+.nav-item:hover, .nav-link:hover {
+    color: #000 !important;
+    background: rgba(0,0,0,0.05) !important;
+}
+
+.hero .navigation-links .nav-link {
+    color: #000 !important;
+    background: #fff !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    font-weight: 600;
+    font-size: 0.98rem;
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.2rem;
+    transition: background 0.35s cubic-bezier(0.4,0,0.2,1), color 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.35s cubic-bezier(0.4,0,0.2,1), transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.hero .navigation-links .nav-link:hover {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #222 !important;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    transform: translateY(-3px) scale(1.06);
 } 

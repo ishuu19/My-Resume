@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-page">
     <!-- Sticky Header -->
     <header class="sticky-header">
         <nav class="nav-container">
@@ -29,25 +32,19 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
         <div class="hero-content">
+            <div class="profile-image-container large-profile-image no-grayscale">
+                <img src="TRY 4.png" alt="Anayed Hossain Eshan" class="profile-image">
+            </div>
             <div class="hero-text">
-                <div class="profile-image-container">
-                    <img src="TRY 4.png" alt="Anayed Hossain Eshan" class="profile-image">
-                </div>
                 <h1>Anayed Hossain Eshan</h1>
-                <h2>Data Analyst | Data Scientist | Data Visualizer</h2>
                 <p>Data enthusiast turning insights into impact. Skilled in analytics, visualization, machine learning, and research. Passionate about transforming data into powerful stories that drive action.</p>
                 <div class="typing-container">
                     <span>I specialize in </span>
                     <span class="typing-text"></span>
                     <span class="cursor">|</span>
                 </div>
+                <a href="./Anayed Hossain Eshan_resume_vl.pdf" class="download-resume-btn" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> View Resume</a>
                 <div class="navigation-links">
                     <a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
                     <a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i> Hobbies</a>
@@ -56,40 +53,6 @@
                 <div class="social-links">
                     <a href="https://linkedin.com/in/anayedhossaineshan/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ishuu19" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-            <div class="data-visualization">
-                <div class="chart-container">
-                    <svg class="interactive-chart" viewBox="0 0 100 100">
-                        <circle class="chart-circle" cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="125.6"/>
-                        <text class="chart-text" x="50" y="50" text-anchor="middle" dominant-baseline="middle">0%</text>
-                    </svg>
-                </div>
-                <div class="chart-container">
-                    <svg class="interactive-chart" viewBox="0 0 100 100">
-                        <rect class="chart-bar" x="10" y="60" width="15" height="40" fill="#ffffff"/>
-                        <rect class="chart-bar" x="30" y="40" width="15" height="60" fill="#ffffff"/>
-                        <rect class="chart-bar" x="50" y="70" width="15" height="30" fill="#ffffff"/>
-                        <rect class="chart-bar" x="70" y="50" width="15" height="50" fill="#ffffff"/>
-                    </svg>
-                </div>
-                <div class="chart-container">
-                    <svg class="interactive-chart" viewBox="0 0 100 100">
-                        <path class="chart-line" d="M10,80 L30,60 L50,70 L70,40 L90,20" fill="none" stroke="#ffffff" stroke-width="2"/>
-                        <circle class="chart-point" cx="10" cy="80" r="4" fill="#ffffff"/>
-                        <circle class="chart-point" cx="30" cy="60" r="4" fill="#ffffff"/>
-                        <circle class="chart-point" cx="50" cy="70" r="4" fill="#ffffff"/>
-                        <circle class="chart-point" cx="70" cy="40" r="4" fill="#ffffff"/>
-                        <circle class="chart-point" cx="90" cy="20" r="4" fill="#ffffff"/>
-                    </svg>
-                </div>
-                <div class="chart-container">
-                    <svg class="interactive-chart" viewBox="0 0 100 100">
-                        <path class="chart-pie" d="M50,50 L50,10 A40,40 0 0,1 90,50 Z" fill="#ffffff"/>
-                        <path class="chart-pie" d="M50,50 L90,50 A40,40 0 0,1 50,90 Z" fill="#ffffff"/>
-                        <path class="chart-pie" d="M50,50 L50,90 A40,40 0 0,1 10,50 Z" fill="#ffffff"/>
-                        <path class="chart-pie" d="M50,50 L10,50 A40,40 0 0,1 50,10 Z" fill="#ffffff"/>
-                    </svg>
                 </div>
             </div>
         </div>
@@ -234,7 +197,7 @@
                         <div class="skill-item">
                             <div class="skill-name">
                                 <i class="fas fa-book-open"></i>
-                                <span>Data Storytelling</span>
+                                <span>Web Development</span>
                             </div>
                             <div class="skill-level expert" data-level="Intermediate"></div>
                         </div>
@@ -255,7 +218,7 @@
                         <div class="skill-item">
                             <div class="skill-name">
                                 <i class="fas fa-robot"></i>
-                                <span>LLMs</span>
+                                <span>LLM Integration</span>
                             </div>
                             <div class="skill-level advanced" data-level="Advanced"></div>
                         </div>

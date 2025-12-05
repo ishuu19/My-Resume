@@ -12,22 +12,76 @@ const skills = [
     'Statistical Modeling'
 ];
 
-// Smooth scrolling for the down arrow
+// Enhanced smooth scrolling function
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
+        
+        // Skip if it's just '#'
         if (targetId === '#') return;
         
         const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
+        if (!targetElement) return;
+        
+        // Get the target position
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        
+        // Custom easing function for smoother acceleration/deceleration
+        function easeInOutCubic(t) {
+            return t < 0.5 
+                ? 4 * t * t * t 
+                : 1 - Math.pow(-2 * t + 2, 3) / 2;
         }
+        
+        // Animation duration based on distance (slower for longer distances)
+        const duration = 1200 + Math.min(Math.abs(distance) * 0.5, 800);
+        let startTime = null;
+        
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            
+            // Apply easing to the progress
+            const easedProgress = easeInOutCubic(progress);
+            
+            window.scrollTo(0, startPosition + (distance * easedProgress));
+            
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            } else {
+                // Ensure we land exactly on the target
+                window.scrollTo(0, targetPosition);
+            }
+        }
+        
+        // Start the animation
+        requestAnimationFrame(animation);
     });
 });
+
+// Optional: Add a subtle bounce effect when reaching the target
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function() {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        setTimeout(() => {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.classList.add('highlight-section');
+                setTimeout(() => {
+                    targetElement.classList.remove('highlight-section');
+                }, 1000);
+            }
+        }, 1300); // Delay slightly longer than the scroll duration
+    });
+});
+
+
 
 // Function to create typing animation
 function createTypingAnimation() {

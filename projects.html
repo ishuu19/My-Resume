@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
             color: #333;
             font-family: 'Inter', sans-serif;
         }
-        
+
         header {
             background-color: #fff;
             border-bottom: 1px solid #ddd;
@@ -24,7 +25,7 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -33,19 +34,19 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
         }
-        
+
         .logo a {
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 5px;
         }
-        
+
         .bengali-logo {
             font-family: 'Noto Sans Bengali', sans-serif;
             font-size: 1.5rem;
@@ -58,18 +59,18 @@
             justify-content: center;
             border-radius: 50%;
         }
-        
+
         .bengali-text {
             font-family: 'Noto Sans Bengali', sans-serif;
             font-size: 1.2rem;
             color: #333;
         }
-        
+
         .nav-links {
             display: flex;
             align-items: center;
         }
-        
+
         .nav-link {
             color: #333;
             text-decoration: none;
@@ -79,11 +80,12 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
-        .nav-link:hover, .nav-link.active {
+
+        .nav-link:hover,
+        .nav-link.active {
             color: #000;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -94,17 +96,18 @@
             background-color: #000;
             transition: width 0.3s ease;
         }
-        
-        .nav-link:hover::after, .nav-link.active::after {
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
-        
+
         .projects-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 120px 20px 80px;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -113,7 +116,7 @@
             color: #000;
             font-weight: 700;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -124,13 +127,13 @@
             height: 3px;
             background-color: #000;
         }
-        
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
-        
+
         .project-card {
             background-color: #fff;
             border-radius: 12px;
@@ -144,12 +147,12 @@
             flex-direction: column;
             border: 2px solid #999;
         }
-        
+
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
-        
+
         .project-image {
             height: 250px;
             overflow: hidden;
@@ -159,7 +162,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .project-image::after {
             content: '';
             position: absolute;
@@ -167,20 +170,20 @@
             left: 0;
             width: 100%;
             height: 40px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
         }
-        
+
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             transition: transform 0.5s ease;
         }
-        
+
         .project-card:hover .project-image img {
             transform: scale(1.05);
         }
-        
+
         .project-content {
             padding: 25px;
             position: relative;
@@ -188,7 +191,7 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .project-content h3 {
             margin: 0 0 15px 0;
             font-size: 1.8rem;
@@ -196,7 +199,7 @@
             font-weight: 600;
             text-align: center;
         }
-        
+
         .project-overview {
             margin: 0 0 20px 0;
             font-size: 1rem;
@@ -205,7 +208,7 @@
             flex-grow: 1;
             text-align: center;
         }
-        
+
         .project-skills {
             display: flex;
             flex-wrap: wrap;
@@ -213,7 +216,7 @@
             margin-bottom: 20px;
             justify-content: center;
         }
-        
+
         .skill-tag {
             background-color: rgba(0, 0, 0, 0.05);
             color: #333;
@@ -222,7 +225,7 @@
             font-size: 0.9rem;
             border: 1px solid #999;
         }
-        
+
         .project-details {
             position: absolute;
             top: 0;
@@ -240,18 +243,18 @@
             overflow-y: auto;
             text-align: center;
         }
-        
+
         .project-card:hover .project-details {
             opacity: 1;
         }
-        
+
         .project-details p {
             margin-bottom: 20px;
             line-height: 1.6;
             color: #fff;
             font-size: 1.05rem;
         }
-        
+
         .project-details ul {
             margin-bottom: 20px;
             padding-left: 0;
@@ -262,12 +265,12 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .project-details li {
             margin-bottom: 10px;
             font-size: 1.05rem;
         }
-        
+
         .project-link {
             display: inline-flex;
             align-items: center;
@@ -287,13 +290,13 @@
             border-radius: 4px;
             transition: all 0.3s ease;
         }
-        
+
         .project-link:hover {
             background-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .project-link::after {
             content: '';
             position: absolute;
@@ -304,11 +307,11 @@
             background-color: #fff;
             transition: width 0.3s ease;
         }
-        
+
         .project-link:hover::after {
             width: 100%;
         }
-        
+
         footer {
             background-color: #fff;
             border-top: 1px solid #ddd;
@@ -316,68 +319,69 @@
             text-align: center;
             color: #333;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-bottom: 20px;
         }
-        
+
         .social-link {
             color: #333;
             font-size: 1.5rem;
             transition: transform 0.3s ease;
         }
-        
+
         .social-link:hover {
             transform: translateY(-5px);
             color: #000;
         }
-        
+
         @media (max-width: 1024px) {
             .projects-grid {
                 grid-template-columns: 1fr;
                 max-width: 800px;
                 margin: 0 auto;
             }
-            
+
             .project-card {
                 height: auto;
                 min-height: 500px;
             }
-            
+
             nav {
                 flex-wrap: wrap;
             }
-            
+
             .nav-link {
                 margin: 5px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .projects-grid {
                 grid-template-columns: 1fr;
                 max-width: 500px;
                 margin: 0 auto;
             }
-            
+
             .project-card {
                 height: auto;
                 min-height: 420px;
             }
-            
+
             nav {
                 flex-wrap: wrap;
             }
-            
+
             .nav-link {
                 margin: 5px;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -398,7 +402,7 @@
 
     <main class="projects-container">
         <h1 class="section-title">My Projects</h1>
-        
+
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card">
@@ -407,7 +411,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Data Analysis Dashboard - Sales Performance</h3>
-                    <p class="project-overview">A comprehensive dashboard for visualizing business metrics and KPIs, providing actionable insights for decision-makers.</p>
+                    <p class="project-overview">A comprehensive dashboard for visualizing business metrics and KPIs,
+                        providing actionable insights for decision-makers.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">DAX</span>
@@ -416,7 +421,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>This interactive dashboard was developed to track sales performance, inventory levels, and customer behavior for all the states in USA. It features:</p>
+                    <p>This interactive dashboard was developed to track sales performance, inventory levels, and
+                        customer behavior for all the states in USA. It features:</p>
                     <ul>
                         <li>A clear, executive-level dashboard that tells a visual story of sales performance.</li>
                         <li>Custom DAX measures for complex calculations</li>
@@ -424,7 +430,8 @@
                         <li>Automated refresh schedules</li>
                     </ul>
                     <p>The dashboard reduced analysis time and helped identify key growth opportunities.</p>
-                    <a href="https://github.com/ishuu19/PowerBI-Report---Sales" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/ishuu19/PowerBI-Report---Sales" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -435,7 +442,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -444,7 +452,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -452,8 +461,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -464,7 +475,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Bright Automated Web Scraping Tool</h3>
-                    <p class="project-overview">An automated web scraping tool that collects and analyzes market data from multiple sources to inform business strategy.</p>
+                    <p class="project-overview">An automated web scraping tool that collects and analyzes market data
+                        from multiple sources to inform business strategy.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Beautiful Soup</span>
@@ -485,32 +497,105 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 4 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="data/BI1.png" alt="Machine Learning Model">
+                    <img src="data/PD2.png" alt="Portfolio Management Platform">
                 </div>
                 <div class="project-content">
-                    <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <h3>Portfolio Management Platform</h3>
+                    <p class="project-overview">A comprehensive financial portfolio management platform for
+                        non-professional investors built with Streamlit, featuring AI-powered insights, real-time stock
+                        tracking, and intelligent alerts.</p>
                     <div class="project-skills">
-                        <span class="skill-tag">Data Cleaning</span>
-                        <span class="skill-tag">DAX</span>
-                        <span class="skill-tag">Data Modeling</span>
-                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">GPT-4</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">yfinance</span>
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>A comprehensive financial portfolio management platform featuring:</p>
                     <ul>
-                        <li>Slicers and filters for dynamic reporting</li>
-                        <li>DAX formulas for KPI calculations</li>
-                        <li>Drill-through and tooltip pages</li>
-                        <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
-                        <li>Bookmarks (for storytelling)</li>
+                        <li>Portfolio dashboard with 20 HK stocks and 1M HKD virtual trading</li>
+                        <li>AI price predictions with dual strategies and PowerBI-style dashboard</li>
+                        <li>GPT-4 powered email alerts (12+ criteria) for portfolio updates</li>
+                        <li>Market intelligence with news aggregation, sentiment analysis & risk metrics</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>Built with Streamlit, MongoDB Atlas, OpenAI GPT-4 Turbo, and Yahoo Finance API.</p>
+                    <a href="https://comp4145-pd2.streamlit.app/Portfolio_Dashboard" class="project-link">View Project
+                        <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="data/Cover-Letter-Writer.png" alt="Cover Letter Generator">
+                </div>
+                <div class="project-content">
+                    <h3>Cover Letter Generator</h3>
+                    <p class="project-overview">A web application that automatically generates personalized cover
+                        letters based on your CV and job descriptions, and sends them via Gmail using local Ollama AI.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">Gmail API</span>
+                        <span class="skill-tag">PDF Processing</span>
+                        <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <p>A web app that auto-generates personalized cover letters from your CV and job descriptions, then
+                        sends them via Gmail.</p>
+                    <ul>
+                        <li>Upload CV (PDF) for automatic parsing</li>
+                        <li>Input job description and desired word count</li>
+                        <li>AI-powered cover letter generation using local Ollama (llama2)</li>
+                        <li>Email preview with AI subject line and Gmail API sending</li>
+                    </ul>
+                    <p>Built with Python, Flask, Ollama, and Gmail API. All processing is local—ensuring privacy and
+                        security.</p>
+                    <a href="https://github.com/ishuu19/Automated_resume-writer-and-email-sender"
+                        class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="data/LibrarySystem.png" alt="Library Management System">
+                </div>
+                <div class="project-content">
+                    <h3>Library Management System</h3>
+                    <p class="project-overview">A full-stack web application for managing library operations including
+                        book inventory, user management, and borrowing/returning functionality.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Vue.js 3</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">JWT</span>
+                        <span class="skill-tag">Vite</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <p>A comprehensive library management system with full CRUD operations and role-based access control.
+                    </p>
+                    <ul>
+                        <li>Book management: CRUD for books (add, edit, delete, view details), search, and browse</li>
+                        <li>User management: Admin-only user CRUD, role-based access (admin/regular), and
+                            authentication</li>
+                        <li>Borrow/return: Borrow and return books, track borrow history per user and book, and manage
+                            availability</li>
+                        <li>Authentication & authorization: JWT-based login/logout, protected routes, and admin-only
+                            features</li>
+                    </ul>
+                    <p>Built with Vue.js 3, Express.js, MongoDB, JWT authentication, and Vite for a modern full-stack
+                        experience.</p>
+                    <a href="https://github.com/ishuu19/LibraryManagement" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -521,7 +606,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -530,7 +616,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -538,8 +625,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -550,7 +639,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -559,7 +649,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -567,8 +658,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -579,7 +672,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -588,7 +682,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -596,8 +691,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -608,7 +705,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -617,7 +715,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -625,8 +724,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -637,7 +738,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -646,7 +748,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -654,8 +757,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -666,7 +771,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -675,7 +781,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -683,8 +790,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -695,7 +804,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -704,7 +814,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -712,8 +823,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -724,7 +837,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -733,7 +847,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -741,8 +856,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -753,7 +870,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -762,7 +880,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -770,8 +889,10 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
@@ -782,7 +903,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Hospitality Analysis</h3>
-                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
                     <div class="project-skills">
                         <span class="skill-tag">Data Cleaning</span>
                         <span class="skill-tag">DAX</span>
@@ -791,7 +913,8 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
                     <ul>
                         <li>Slicers and filters for dynamic reporting</li>
                         <li>DAX formulas for KPI calculations</li>
@@ -799,11 +922,46 @@
                         <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
                         <li>Bookmarks (for storytelling)</li>
                     </ul>
-                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping leadership optimize revenue and operations.</p>
-                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="data/BI1.png" alt="Machine Learning Model">
+                </div>
+                <div class="project-content">
+                    <h3>Hospitality Analysis</h3>
+                    <p class="project-overview">Hospitality Analysis in Power BI visualizes key business metrics across
+                        hotel properties to evaluate performance and drive strategic decisions.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">DAX</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">Power BI</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <p>Hospitality Analysis in Power BI visualizes key business metrics across hotel properties to
+                        evaluate performance and drive strategic decisions.</p>
+                    <ul>
+                        <li>Slicers and filters for dynamic reporting</li>
+                        <li>DAX formulas for KPI calculations</li>
+                        <li>Drill-through and tooltip pages</li>
+                        <li>Cards, bar charts, line graphs, treemaps, and heatmaps</li>
+                        <li>Bookmarks (for storytelling)</li>
+                    </ul>
+                    <p>It enabled quick identification of high-performing hotels and cost-heavy departments, helping
+                        leadership optimize revenue and operations.</p>
+                    <a href="https://github.com/ishuu19/Hospitality-Analysis" class="project-link">View Project <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -816,4 +974,5 @@
         <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
 </body>
-</html> 
+
+</html>

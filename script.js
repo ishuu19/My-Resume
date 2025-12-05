@@ -12,6 +12,23 @@ const skills = [
     'Statistical Modeling'
 ];
 
+// Smooth scrolling for the down arrow
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 // Function to create typing animation
 function createTypingAnimation() {
     const typingText = document.querySelector('.typing-text');

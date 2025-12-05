@@ -2370,3 +2370,26 @@ footer {
     font-size: 0.8rem;
   }
 } 
+
+.scroll-down-arrow {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.scroll-down-link {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.scroll-down-link:hover {
+    color: #007bff;
+    transform: translateY(3px);
+}
+
+.scroll-down-link i {
+    display: block;
+}

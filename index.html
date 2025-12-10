@@ -63,44 +63,91 @@
         </div>
     </section> -->
 
-    <!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0;">
+    <div class="hero-content" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+        text-align: left;
+    ">
+        
+        <!-- Profile Image -->
         <div class="profile-image-container large-profile-image no-grayscale">
-            <img src="TRY 4.png" alt="Anayed Hossain Eshan" class="profile-image">
+            <img src="TRY 4.png" alt="Anayed Hossain Eshan" class="profile-image" style="
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            ">
         </div>
-        <div class="hero-text">
-            <h1>Anayed Hossain Eshan</h1>
 
-            <!-- Added space below the name -->
-            <div style="margin-top: 15px;"></div>
+        <!-- Hero Text -->
+        <div class="hero-text" style="max-width: 500px;">
+            <h1 style="font-size: 42px; font-weight: 700; margin-bottom: 20px;">
+                Anayed Hossain Eshan
+            </h1>
 
-            <div class="typing-container">
+            <!-- More breathing room before typing text -->
+            <div class="typing-container" style="
+                font-size: 22px;
+                margin-bottom: 25px;
+            ">
                 <span>I specialize in </span>
                 <span class="typing-text"></span>
                 <span class="cursor">|</span>
             </div>
-            
-            <a href="./Anayed Hossain Eshan_resume_vl.pdf" class="download-resume-btn" target="_blank" rel="noopener">
+
+            <!-- Resume Button -->
+            <a href="./Anayed Hossain Eshan_resume_vl.pdf" 
+               class="download-resume-btn"
+               target="_blank" rel="noopener"
+               style="
+                   display: inline-block;
+                   padding: 12px 20px;
+                   border-radius: 8px;
+                   font-size: 16px;
+                   margin-bottom: 25px;
+               ">
                 <i class="fas fa-file-alt"></i> View Resume
             </a>
-            <div class="navigation-links">
-                <a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="hobbies.html" class="nav-link"><i class="fas fa-heart"></i> Hobbies</a>
-                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+
+            <!-- Navigation -->
+            <div class="navigation-links" style="margin-bottom: 25px;">
+                <a href="projects.html" class="nav-link" style="margin-right: 20px;">
+                    <i class="fas fa-project-diagram"></i> Projects
+                </a>
+                <a href="hobbies.html" class="nav-link" style="margin-right: 20px;">
+                    <i class="fas fa-heart"></i> Hobbies
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
             </div>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/anayedhossaineshan/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ishuu19" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+
+            <!-- Social Icons -->
+            <div class="social-links" style="margin-bottom: 30px;">
+                <a href="https://linkedin.com/in/anayedhossaineshan/" target="_blank" class="social-link" style="margin-right: 15px;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/ishuu19" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
+
+            <!-- Scroll Arrow -->
             <div class="scroll-down-arrow">
-                <a href="#skills" class="scroll-down-link">
+                <a href="#skills" class="scroll-down-link" style="font-size: 26px;">
                     <i class="fas fa-chevron-down"></i>
                 </a>
             </div>
         </div>
     </div>
 </section>
+
 
 
     <!-- Skills Section: Modern Black & White, Responsive Layout, No Filter -->
